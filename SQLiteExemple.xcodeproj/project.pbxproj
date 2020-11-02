@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		579D59BB55E5399253DB20B8 /* Pods_SQLiteExemple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98289DCE71D792C518CDE31 /* Pods_SQLiteExemple.framework */; };
 		CFF60DB125501EFD00FBC941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF60DB025501EFD00FBC941 /* AppDelegate.swift */; };
 		CFF60DB325501EFD00FBC941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF60DB225501EFD00FBC941 /* SceneDelegate.swift */; };
 		CFF60DB525501EFD00FBC941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF60DB425501EFD00FBC941 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF3ED0F92550789000B7297C /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.db; sourceTree = "<group>"; };
 		CFF60DAD25501EFD00FBC941 /* SQLiteExemple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLiteExemple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF60DB025501EFD00FBC941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF60DB225501EFD00FBC941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,9 @@
 		CFF60DB925501EFE00FBC941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF60DBC25501EFE00FBC941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF60DBE25501EFE00FBC941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEB1BCF4AEC40A0A1CD79C92 /* Pods-SQLiteExemple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteExemple.release.xcconfig"; path = "Target Support Files/Pods-SQLiteExemple/Pods-SQLiteExemple.release.xcconfig"; sourceTree = "<group>"; };
+		F20209EFDA4450C4BC57E764 /* Pods-SQLiteExemple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteExemple.debug.xcconfig"; path = "Target Support Files/Pods-SQLiteExemple/Pods-SQLiteExemple.debug.xcconfig"; sourceTree = "<group>"; };
+		F98289DCE71D792C518CDE31 /* Pods_SQLiteExemple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLiteExemple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579D59BB55E5399253DB20B8 /* Pods_SQLiteExemple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C83A7C87AF7D1645818D267 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F98289DCE71D792C518CDE31 /* Pods_SQLiteExemple.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2C6918A99EA060B6242831C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F20209EFDA4450C4BC57E764 /* Pods-SQLiteExemple.debug.xcconfig */,
+				EEB1BCF4AEC40A0A1CD79C92 /* Pods-SQLiteExemple.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CFF60DA425501EFD00FBC941 = {
 			isa = PBXGroup;
 			children = (
 				CFF60DAF25501EFD00FBC941 /* SQLiteExemple */,
 				CFF60DAE25501EFD00FBC941 /* Products */,
+				A2C6918A99EA060B6242831C /* Pods */,
+				2C83A7C87AF7D1645818D267 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +88,7 @@
 				CFF60DB925501EFE00FBC941 /* Assets.xcassets */,
 				CFF60DBB25501EFE00FBC941 /* LaunchScreen.storyboard */,
 				CFF60DBE25501EFE00FBC941 /* Info.plist */,
+				CF3ED0F92550789000B7297C /* database.db */,
 			);
 			path = SQLiteExemple;
 			sourceTree = "<group>";
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFF60DC125501EFE00FBC941 /* Build configuration list for PBXNativeTarget "SQLiteExemple" */;
 			buildPhases = (
+				D6700EE575A06F70CCA00771 /* [CP] Check Pods Manifest.lock */,
 				CFF60DA925501EFD00FBC941 /* Sources */,
 				CFF60DAA25501EFD00FBC941 /* Frameworks */,
 				CFF60DAB25501EFD00FBC941 /* Resources */,
+				B172FB66EABA1313AA275DA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B172FB66EABA1313AA275DA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLiteExemple/Pods-SQLiteExemple-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLiteExemple/Pods-SQLiteExemple-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SQLiteExemple/Pods-SQLiteExemple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6700EE575A06F70CCA00771 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SQLiteExemple-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFF60DA925501EFD00FBC941 /* Sources */ = {
@@ -282,6 +352,7 @@
 		};
 		CFF60DC225501EFE00FBC941 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F20209EFDA4450C4BC57E764 /* Pods-SQLiteExemple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +371,7 @@
 		};
 		CFF60DC325501EFE00FBC941 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEB1BCF4AEC40A0A1CD79C92 /* Pods-SQLiteExemple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
